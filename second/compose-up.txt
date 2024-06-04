@@ -1,0 +1,4 @@
+ Container second-nginx-1  Creating
+ Container second-nginx-1  Created
+ Container second-nginx-1  Starting
+ Container second-nginx-1  Started

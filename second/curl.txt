@@ -1,0 +1,70 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:443...
+* Connected to localhost (127.0.0.1) port 443 (#0)
+* ALPN: offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [25 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [924 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: C=AU; ST=AU; L=AU; O=AU; OU=AU; CN=localhost
+*  start date: Jun  3 11:42:50 2024 GMT
+*  expire date: Jun  3 11:42:50 2025 GMT
+*  issuer: C=AU; ST=AU; L=AU; O=AU; OU=AU; CN=localhost
+*  SSL certificate verify result: self-signed certificate (18), continuing anyway.
+* using HTTP/1.1
+} [5 bytes data]
+> GET / HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.88.1
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Server: nginx/1.26.0
+< Date: Mon, 03 Jun 2024 13:54:10 GMT
+< Content-Type: text/html
+< Content-Length: 122
+< Last-Modified: Mon, 03 Jun 2024 11:01:53 GMT
+< Connection: keep-alive
+< ETag: "665da2a1-7a"
+< Accept-Ranges: bytes
+< 
+{ [122 bytes data]
+100   122  100   122    0     0   2398      0 --:--:-- --:--:-- --:--:--  2440
+* Connection #0 to host localhost left intact
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<h1>Nginx</h1>
+<p>Hello, world</p>
+</body>
+
+</html>

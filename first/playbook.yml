@@ -1,0 +1,32 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: root
+  
+  vars:
+    nginx_port: "80"
+    nginx_server: localhost
+    nginx_root: /usr/share/nginx/html
+    nginx_config: nginx.conf
+
+      
+  tasks:
+    - name: Установить Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+
+    - name: Скопировать файл конфигураций
+      template:
+        src: "{{ nginx_config }}.j2"
+        dest: "{{ nginx_config }}"
+
+    - name: Запустить nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+        
+    - name: Проверить доступность nginx
+      ansible.builtin.uri:
+        url: "http://{{ nginx_server }}:{{ nginx_port }}"
