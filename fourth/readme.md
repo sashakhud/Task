@@ -1,0 +1,1 @@
+Использовал github container registry.
